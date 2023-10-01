@@ -4,4 +4,4 @@ Users should be able to generate and copy to cliboard a password of any length b
 
 [Live Site](https://ihcoops.github.io/neo-brutal-password-generator/)
 
-![Screenshot](/relative/path/to/screenshot.jpg?raw=true "Screenshot")
+![Screenshot](/screenshot.jpg?raw=true "Screenshot")
