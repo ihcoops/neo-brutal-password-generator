@@ -1,0 +1,157 @@
+/********************************
+* General Reset
+********************************/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/********************************
+* Custom Properties
+********************************/
+
+:root {
+  --Black: hsl(0, 0%, 0%);
+  --Antique-white: hsl(34, 78%, 91%);
+  --Light-antique-white: hsl(28, 100%, 97%);
+  --Orange: hsl(33, 100%, 75%);
+  --Yellow: hsl(56, 94%, 57%);
+  --Green: hsl(113, 68%, 58%);
+  --Purple: hsl(276, 54%, 56%);
+}
+
+/********************************
+* Styling
+********************************/
+
+html {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+body {
+  background-color: var(--Antique-white);
+}
+
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  min-width: 500px;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.password-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Orange);
+  border: solid var(--Black) 2px;
+  margin-bottom: 16px;
+  padding: 16px;
+  box-shadow: 2px 2px var(--Black);
+  border-radius: 4px;
+
+}
+
+.length-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.length {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.length-number-container {
+  background-color: var(--Light-antique-white);
+  padding: 10px;
+  box-shadow: 2px 2px var(--Black);
+  border: solid var(--Black) 2px;
+  border-radius: 4px;
+}
+
+.password-geneartor-container {
+  background-color: var(--Orange);
+  border: solid var(--Black) 2px;
+  padding: 16px;
+  box-shadow: 2px 2px var(--Black);
+  border-radius: 4px;
+}
+
+.strength-container {
+  display: flex;
+  margin: 18px 0px;
+}
+
+.generate-button {
+  width: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+p,
+label {
+  font-weight: 500;
+}
+
+button {
+  font-weight: 700;
+  background-color: var(--Light-antique-white);
+  text-transform: uppercase;
+  border: solid var(--Black) 2px;
+  border-radius: 4px;
+  padding: 12px 18px;
+  align-self: center;
+  box-shadow: 4px 4px var(--Black);
+  transition: transform 50ms, box-shadow 50ms;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px var(--Black);
+}
+
+button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px var(--Black);
+}
+
+
+/********************************
+* Responsiveness
+********************************/
+
+@media(max-width: 700px) {
+  .card {
+    min-width: 300px;
+  }
+}

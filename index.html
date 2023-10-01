@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/slider.css">
+  <link rel="stylesheet" href="styles/checkbox.css">
+
+  <!--Fonts from google-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="card-container">
+    <div class="card">
+      <h1 class="title">password generator.</h1>
+      <div class="password-container">
+        <h2 class="password-display">P4$5W0rD!</h2>
+        <button class="copy">copy!</button>
+      </div>
+      <div class="password-geneartor-container">
+        <div class="length-container">
+          <p>password length</p>
+          <div class="length-number-container">
+            <p class="length">10</p>
+          </div>
+        </div>
+        <div class="slider-container">
+          <input type="range" min="1" max="20" value="10" class="slider" id="slider">
+        </div>
+        <form>
+          <label class="container" for="uppercase">include uppercase letters
+            <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" checked>
+            <span class="checkmark"></span>
+          </label><br>
+          <label class="container" for="lowercase">include lowercase letters
+            <input type="checkbox" id="lowercase" name="lowercase" value="lowercase">
+            <span class="checkmark"></span>
+          </label><br>
+          <label class="container" for="numbers">include numbers
+            <input type="checkbox" id="numbers" name="numbers" value="numbers">
+            <span class="checkmark"></span>
+          </label><br>
+          <label class="container" for="symbols">include symbols
+            <input type="checkbox" id="symbols" name="symbols" value="symbols">
+            <span class="checkmark"></span>
+          </label><br>
+        </form>
+
+        <div class="strength-container">
+          <h1>strength: <span class="strength">medium</span></h1>
+        </div>
+
+        <button class="generate-button">generate!</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
