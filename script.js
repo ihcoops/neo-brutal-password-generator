@@ -21,7 +21,7 @@ const generateButton = document.querySelector('.generate-button');
 const copyButton = document.querySelector('.copy');
 
 generateButton.addEventListener('click', () => {
-  if(upperCaseBox.checked || lowerCaseBox.checked || numbersBox.checked || symbolsBox.checked) {
+  if (upperCaseBox.checked || lowerCaseBox.checked || numbersBox.checked || symbolsBox.checked) {
     generate();
   }
 });
@@ -32,13 +32,13 @@ copyButton.addEventListener('click', () => {
 });
 
 
-  const copyContent = async (text) => {
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch (err) {
-      console.error('Failed to copy: ', err);
-    }
+const copyContent = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (err) {
+    console.error('Failed to copy: ', err);
   }
+}
 
 slider.oninput = function () {
   output.innerHTML = this.value;
@@ -66,27 +66,22 @@ function generate() {
 
   for (let i = 0; i < passLength; i++) {
     const index = Math.floor(Math.random() * characters.length + 1);
-    if (password.includes(characters.charAt(index))) {
-      i--;
-    }
-    else {
-      password += characters.charAt(index);
-    }
+    password += characters.charAt(index);
   }
 
   passwordDisplay.innerHTML = password;
 
   let strength = (Math.log2(characters.length) * passLength) / maxStrength;
-  if(strength < 0.25) {
+  if (strength < 0.25) {
     strengthDisplay.innerHTML = "too weak"
   }
-  else if(strength < 0.5) {
+  else if (strength < 0.5) {
     strengthDisplay.innerHTML = "weak"
   }
-  else if(strength < 0.75) {
+  else if (strength < 0.75) {
     strengthDisplay.innerHTML = "medium"
   }
-  else if(strength <= 1) {
+  else if (strength <= 1) {
     strengthDisplay.innerHTML = "strong"
   }
 }
